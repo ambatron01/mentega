@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <h1 class="text-center"><I>Data Barang</I></h1>
+    <h1 class="text-center"><I><a href="/">data barang</a></I></h1>
     <div class="shadow p-3 mb-bg-body rounded">
     <table class="table">
   <thead class="table-dark">
@@ -16,7 +16,6 @@
       <th scope="col">nama barang</th>
       <th scope="col">tersedia</th>
       <th scope="col">terjual</th>
-      <th scope="col">aksi</th>
     </tr>
     </thead>
     <?php $nomor = 1 ?>
@@ -27,7 +26,6 @@
     <td>{{$item->nama_barang}}</td>
     <td>{{$item->tersedia}}</td>
     <td>{{$item->terjual}}</td>
-
   </tr>
   @endforeach
   </tbody>

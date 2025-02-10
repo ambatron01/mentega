@@ -9,7 +9,7 @@ class InbarangController extends Controller
 {
     public function barang()
     {
-        $barang = Barang::get();
-        return view( '/page/data-barang', ['barang=>$barang']);
+        $barang = barang::get();
+        return view( '/page/data-barang', ['barang'=>$barang]);
     }
 }

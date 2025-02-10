@@ -84,4 +84,7 @@ Route::get('/admin/pekerja/edit/{id}',[App\Http\Controllers\PekerjaController::c
 //hapus
 Route::get('/admin/pekerja/tampil/delete/{id}',[App\Http\Controllers\PekerjaController::class,'delete']);
 
+
+//muntahan
+
 Route::get('/page/data-barang',[App\Http\Controllers\InbarangController::class,'barang'])->name('page.data-barang');
