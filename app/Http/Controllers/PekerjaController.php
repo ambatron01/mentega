@@ -10,17 +10,17 @@ class pekerjaController extends Controller
     public function tampil()
     {
         $pekerja = pekerja::all();  
-        return View('admin.pekerja.tampil' , compact('pekerja'));
+        return View('profile.admin.pekerja.tampil' , compact('pekerja'));
     }
     
     public function tambah()
     {
-        return view('admin.pekerja.tambah');
+        return view('in-pekerja.tambah');
     }
     public function edit($id)
     {
         $pekerja = pekerja::findOrFail($id);
-        return view('admin.pekerja.edit' , compact('pekerja'));
+        return view('in-pekerja.edit' , compact('pekerja'));
     }
     public function post(Request  $request)
     {

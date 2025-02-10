@@ -10,17 +10,17 @@ class Barangcontroller extends Controller
     public function tampil()
     {
         $barang = barang::all();
-        return View('admin.barang.tampil', compact('barang'));
+        return View('profile.admin.barang.tampil', compact('barang'));
     }
     
     public function tambah()
     {
-        return view('admin.barang.tambah');
+        return view('in-barang.tambah');
     }
     public function edit($id)
     {
         $barang=barang::findOrFail($id);
-        return view('admin.barang.edit' , compact('barang'));
+        return view('in-barang.edit' , compact('barang'));
     }
     public function post(Request  $request)
     {

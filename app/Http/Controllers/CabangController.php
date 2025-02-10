@@ -10,17 +10,17 @@ class cabangcontroller extends Controller
     public function tampil()
     {
         $cabang = cabang::all();  
-        return View('admin.cabang.tampil', compact('cabang'));
+        return View('profile.admin.cabang.tampil', compact('cabang'));
     }
     
     public function tambah()
     {
-        return view('admin.cabang.tambah');
+        return view('in-cabang.tambah');
     }
     public function edit($id)
     {
         $cabang=cabang::findOrFail($id);
-        return view('admin.cabang.edit' , compact('cabang'));
+        return view('in-cabang.edit' , compact('cabang'));
     }
     public function post(Request  $request)
     {

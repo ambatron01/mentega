@@ -27,12 +27,11 @@ Route::get('/pells', [pells_controller::class,'index'])->name('/pells');
 
 
 
-
-
+//home
+Route::get('/home',[App\Http\controllers\HomeController::class,'index']);
     
 
 //route barang
-
 
 //tampil
 Route::get('/admin/barang/tampil',[App\Http\controllers\BarangController::class,'tampil'])->name('admin.barang.tampil');
@@ -85,3 +84,4 @@ Route::get('/admin/pekerja/edit/{id}',[App\Http\Controllers\PekerjaController::c
 //hapus
 Route::get('/admin/pekerja/tampil/delete/{id}',[App\Http\Controllers\PekerjaController::class,'delete']);
 
+Route::get('/page/data-barang',[App\Http\Controllers\InbarangController::class,'barang'])->name('page.data-barang');

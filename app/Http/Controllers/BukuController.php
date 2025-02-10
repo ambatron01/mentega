@@ -10,17 +10,17 @@ class BukuController extends Controller
     public function tampil()
     {
         $buku = buku::all();  
-        return View('admin.buku.tampil', compact('buku'));
+        return View('profile.admin.buku.tampil', compact('buku'));
     }
     
     public function tambah()
     {
-        return view('admin.buku.tambah');
+        return view('in-buku.tambah');
     }
     public function edit($id)
     {
         $buku=buku::findOrFail($id);
-        return view('admin.buku.edit' , compact('buku'));
+        return view('in-buku.edit' , compact('buku'));
     }
     public function post(Request  $request)
     {
