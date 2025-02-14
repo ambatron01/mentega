@@ -91,6 +91,7 @@ Route::get('/data-barang',[App\Http\Controllers\DatabarangController::class,'bar
 
 Route::get('/data-cabang',[App\Http\Controllers\DatacabangController::class,'cabang'])->name('page.data-barang');
 
-Route::get('/data-barang',[App\Http\Controllers\DatabarangController::class,'barang'])->name('page.data-barang');
+Route::get('/data-buku',[App\Http\Controllers\DatabukuController::class,'buku'])->name('page.data-buku');
 
-Route::get('/data-barang',[App\Http\Controllers\DatabarangController::class,'barang'])->name('page.data-barang');
+Route::get('/data-pekerja',[App\Http\Controllers\DatapekerjaController::class,'pekerja'])->name('page.data-pekerja');
+
