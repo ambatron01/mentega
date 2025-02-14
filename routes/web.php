@@ -87,4 +87,10 @@ Route::get('/admin/pekerja/tampil/delete/{id}',[App\Http\Controllers\PekerjaCont
 
 //muntahan
 
-Route::get('/page/data-barang',[App\Http\Controllers\InbarangController::class,'barang'])->name('page.data-barang');
+Route::get('/data-barang',[App\Http\Controllers\DatabarangController::class,'barang'])->name('page.data-barang');
+
+Route::get('/data-cabang',[App\Http\Controllers\DatacabangController::class,'cabang'])->name('page.data-barang');
+
+Route::get('/data-barang',[App\Http\Controllers\DatabarangController::class,'barang'])->name('page.data-barang');
+
+Route::get('/data-barang',[App\Http\Controllers\DatabarangController::class,'barang'])->name('page.data-barang');
