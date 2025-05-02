@@ -1,57 +1,69 @@
 .signup-content {
-    // position: absolute;
-    width: 562px;
-    margin-right: 0px;
-    background: rgba(177, 135, 77, 0.75);
-    float: right;
-    
+    background: #fff;
+    @include border-radius(10px);
+    padding: 50px 85px;
 }
-.signup-form {
-    padding: 54px 80px 36px 55px;
-}
-
 .form-group {
-    margin-bottom: 23px;
+    overflow: hidden;
+    margin-bottom: 20px;
 }
-input {
-    border: none;
-    box-sizing: border-box;
-    border-bottom: 1px solid $border-color;
-    background: transparent;
+.form-input {
     width: 100%;
-    display: block;
-    color: #fff;
-    font-weight: bold;
-    font-family: 'Poppins';
+    border: 1px solid rgb(235, 235, 235);
+    @include border-radius(5px);
+    padding: 17px 20px;
+    box-sizing: border-box;
     font-size: 14px;
-    padding: 3px 0;
-    &::-webkit-input-placeholder {
-        font-weight: 400;
-        color: #fff;
+    font-weight: 500;
+    color: $black-color;
+    @include input-placeholder($grey-light);
+	&::-webkit-input-placeholder {
+        font-weight: 500;
 	}
 	&::-moz-placeholder {
-        font-weight: 400;
-        color: #fff;
+		font-weight: 500;
 	}
 	&:-ms-input-placeholder {
-        font-weight: 400;
-        color: #fff;
+		font-weight: 500;
 	}
 	&:-moz-placeholder {
-        font-weight: 400;
-        color: #fff;
+		font-weight: 500;
     }
     &:focus {
-        font-weight: bold;
+        border: 1px solid transparent;
+        -webkit-border-image-source: 
+            -webkit-linear-gradient(to right, rgb(159,172,230),  rgb(116,235,213)); 
+        -moz-border-image-source:
+            -moz-linear-gradient(to right, rgb(159,172,230),  rgb(116,235,213)); 
+        -o-border-image-source:
+            -o-linear-gradient(to right, rgb(159,172,230),  rgb(116,235,213));
+        border-image-source:
+            linear-gradient(to right, rgb(159,172,230),  rgb(116,235,213));
+        -webkit-border-image-slice: 1;
+        border-image-slice: 1;
+        @include border-radius(5px);
+        @include input-placeholder($black-color);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
     }
+
 }
-.field-icon {
-    float: right;
-    margin-right: 0px;
-    margin-top: -22px;
-    position: relative;
-    z-index: 2;
+.form-submit {
+    width: 100%;
+    @include border-radius(5px);
+    padding: 17px 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 700;
     color: #fff;
+    text-transform: uppercase;
+    border: none;
+    background-image :    -moz-linear-gradient(to left, #74ebd5,#9face6);
+    background-image :     -ms-linear-gradient(to left, #74ebd5,#9face6);
+    background-image :      -o-linear-gradient(to left, #74ebd5,#9face6);
+    background-image : -webkit-linear-gradient(to left, #74ebd5,#9face6);
+    background-image :         linear-gradient(to left, #74ebd5,#9face6);
+    
 }
 input[type=checkbox]:not(old){
     width     : 2em;
@@ -62,6 +74,7 @@ input[type=checkbox]:not(old){
   }
   input[type=checkbox]:not(old) + label{
       display      : inline-block;
+      margin-top: 7px;
       margin-bottom: 25px;
   }
   input[type=checkbox]:not(old) + label > span{
@@ -69,19 +82,28 @@ input[type=checkbox]:not(old){
     width            : 13px;
     height           : 13px;
     margin-right: 15px;
-    margin-bottom: 4px;
-    border           : 1px solid #fff;
+    margin-bottom: 3px;
+    border           : 1px solid #ebebeb;
     @include border-radius(2px);
-    background       : transparent;
+    background       : rgb(255,255,255);
+    background-image :    -moz-linear-gradient(rgb(255,255,255),rgb(255,255,255));
+    background-image :     -ms-linear-gradient(rgb(255,255,255),rgb(255,255,255));
+    background-image :      -o-linear-gradient(rgb(255,255,255),rgb(255,255,255));
+    background-image : -webkit-linear-gradient(rgb(255,255,255),rgb(255,255,255));
+    background-image :         linear-gradient(rgb(255,255,255),rgb(255,255,255 ));
     vertical-align   : bottom;
   }
   input[type=checkbox]:not(old):checked + label > span,{
-    background       : transparent;
+      background-image :    -moz-linear-gradient(rgb(255,255,255),rgb(255,255,255));
+      background-image :     -ms-linear-gradient(rgb(255,255,255),rgb(255,255,255));
+      background-image :      -o-linear-gradient(rgb(255,255,255),rgb(255,255,255));
+      background-image : -webkit-linear-gradient(rgb(255,255,255),rgb(255,255,255));
+      background-image :         linear-gradient(rgb(255,255,255),rgb(255,255,255 ));
   }
   input[type=checkbox]:not(old):checked + label > span:before{
       content     : '\f26b';
       display     : block;
-      color       : #fff;
+      color       : $black-color;
       font-size   : 11px;
       line-height : 1.2;
       text-align  : center;
@@ -89,46 +111,35 @@ input[type=checkbox]:not(old){
       font-weight: bold;
 }
 .label-agree-term {
-    font-size: 13px;
-    font-weight: 400;
-    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
 }
 .term-service {
-    color: #fff; 
+    color: #555; 
 }
-.form-submit {
-    width: auto;
-    display: inline-block;
-    border: none;
-    background: #fff;
-    color: $brown-color;
-    padding: 10px;
-    height: 50px;
-    @include box-shadow(0px 15px 9.9px 0.1px rgba(0, 0, 0, 0.15));
-    margin-right: 25px;
-    &:hover {
-        background-color: darken(#fff, 10%)
-    }
-}
-.submit {
-    width: 130px;
-    @include border-radius(25px);
-    text-transform: uppercase;
-    
-    font-size: 13px;
-    cursor: pointer;
-}
-.submit-link {
-    border: 2px solid #fff;
-    text-decoration: none;
-    display: inline-block;
-    vertical-align: middle;
-    padding: 12px 0;
+
+.loginhere {
+    color: #555;
+    font-weight: 500;
     text-align: center;
-    color: #fff;
-    &:hover {
-        background: #fff;
-        color: $brown-color;
-    }
+    margin-top: 91px;
+    margin-bottom: 5px;
 }
+.loginhere-link {
+    font-weight: 700;
+    color: $black-color;
+}
+.field-icon {
+    float: right;
+    margin-right: 17px;
+    margin-top: -32px;
+    position: relative;
+    z-index: 2;
+    color: #555;
+  }
+
+
+  
+
   

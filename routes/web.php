@@ -10,9 +10,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/home', function () {
+    return view('home');
+})->middleware(['auth', 'verified'])->name('home');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -21,6 +21,8 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
 Route::get('/project', [project_controller::class,'index'])->name('/project');
 Route::get('/pells', [pells_controller::class,'index'])->name('/pells');
 
@@ -85,13 +87,36 @@ Route::get('/admin/pekerja/edit/{id}',[App\Http\Controllers\PekerjaController::c
 Route::get('/admin/pekerja/tampil/delete/{id}',[App\Http\Controllers\PekerjaController::class,'delete']);
 
 
-//muntahan
+        //muntahan
 
+    //data-barang
 Route::get('/data-barang',[App\Http\Controllers\DatabarangController::class,'barang'])->name('page.data-barang');
+//post
+Route::post('/data-barang',[App\Http\controllers\BarangController::class,'post'])->name('page.data-barang.post');
+//hapus
+Route::get('/data-barang/delete/{id}',[App\Http\controllers\BarangController::class,'delete']);
 
-Route::get('/data-cabang',[App\Http\Controllers\DatacabangController::class,'cabang'])->name('page.data-barang');
+    //data-cabang
+Route::get('/data-cabang',[App\Http\Controllers\DatacabangController::class,'cabang'])->name('page.data-cabang');
+//post
+Route::post('/data-cabang',[App\Http\controllers\CabangController::class,'post'])->name('page.data-cabang.post');
+//hapus
+Route::get('/data-cabang/delete/{id}',[App\Http\controllers\CabangController::class,'delete']);
 
+    //data-buku
 Route::get('/data-buku',[App\Http\Controllers\DatabukuController::class,'buku'])->name('page.data-buku');
+//post
+Route::post('/data-buku',[App\Http\Controllers\BukuController::class,'post'])->name('page.data-buku.post');
+//hapus
+Route::get('/data-buku/delete/{id}',[App\Http\controllers\BukuController::class,'delete']);
 
+    //data-pekerja
 Route::get('/data-pekerja',[App\Http\Controllers\DatapekerjaController::class,'pekerja'])->name('page.data-pekerja');
+//post
+Route::post('/data-pekerja',[App\Http\Controllers\PekerjaController::class,'post'])->name('page.data-pekerja.post');
+//hapus
+Route::get('/data-pekerja/delete/{id}',[App\Http\controllers\PekerjaController::class,'delete']);
+
+
+
 

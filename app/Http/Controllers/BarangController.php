@@ -17,6 +17,8 @@ class Barangcontroller extends Controller
     {
         return view('in-barang.tambah');
     }
+
+
     public function edit($id)
     {
         $barang=barang::findOrFail($id);
@@ -37,13 +39,13 @@ class Barangcontroller extends Controller
         $barang->tersedia=$request->get('tersedia');
         $barang->terjual=$request->get('terjual');
         $barang->save();
-        return redirect()->route('admin.barang.tampil');
+        return redirect()->route('page.data-barang.post');
     }
     public function delete($id)
     {
         $barang = barang::findOrFail($id);
         $barang->delete();
         
-        return redirect()->route('admin.barang.tampil');
+        return redirect()->route('page.data-barang');
     }
 }

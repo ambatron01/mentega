@@ -17,7 +17,6 @@
       <th scope="col">Nama Pekerja</th>
       <th scope="col">Bagian Tugas</th>
       <th scope="col">No Telepon</th>
-      <th scope="col">aksi</th>
     </tr>
     </thead>
     <?php $nomor = 1 ?>
@@ -28,11 +27,6 @@
     <td>{{$worker->nama_pekerja}}</td>
     <td>{{$worker->tugas}}</td>
     <td>{{$worker->no_telepon}}</td>
-    <td>
-        <a href="{{route('admin.pekerja.edit' , $worker->id) }}"><I>Edit</I></a>
-        <br>
-        <a href="/admin/pekerja/tampil/delete/{{$worker->id}}"><i>Hapus</i></a>
-    </td>
   </tr>
   @endforeach
   </tbody>

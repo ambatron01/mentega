@@ -7,60 +7,55 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 input:focus, select:focus, textarea:focus { outline: none; @include box-shadow-input(none); }
 input[type=checkbox] { @include appearance( checkbox ); }
 input[type=radio] { @include appearance( radio ); }
-input:-webkit-autofill {
-    @include box-shadow(0 0 0 30px transparent inset);
-    background-color: transparent !important;
-} 
 img { max-width: 100%; height: auto; }
 figure { margin: 0; }
-p { 
-    margin-bottom: 32px;
-    margin-top: 0px;
-    font-weight: 400;
-    span {
-        font-weight: bold; 
-    }
-}
+p { margin-bottom: 0px; font-size: 15px; color: #777;}
 h2 { 
-    line-height: 1.2; 
+    line-height: 1.66; 
     margin: 0; 
     padding: 0;
-    font-weight: bold; 
-    color: #fff;
-    font-family: 'Poppins';
-    font-size: 36px;
-    margin-bottom: 10px;
+    font-weight: 900; 
+    color: $black-color;
+    font-family: 'Montserrat';
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
 }
 .clear { clear: both; }
 body {
 	font-size: 14px;
     line-height: 1.8;
-    color: #fff;
-    font-weight: 600;
-    font-family: 'Poppins';
-    margin: 0px;
-    background-image: url('../images/body-bg.jpg');
+    color: $black-color;
+    font-weight: 400;
+    font-family: 'Montserrat';
+    background-image: url('../images/signup-bg.jpg');
     background-repeat: no-repeat;
     @include background-size(cover);
     background-position: center center;
-    // padding: 150px 0;
-}
-.main {
-    
-    position: relative;
+    padding: 115px 0;
 }
 .container {
-    margin-top: 120px;
-    margin-bottom: 70px;
-    width: 1123px;
-    padding-top: 135px;
-    padding-bottom: 115px;
-    // padding: 150px 0;
-    // background: rgba(177,135,87, 0.75);
-    background-image: url('../images/container-bg.png');
-    background-repeat: no-repeat;
-    @include background-size(cover);
-    background-position: center center;
-    overflow: hidden;
+    width: 660px;
+    position: relative;
+    margin: 0 auto;
+}
+  
+.display-flex  {
+    @extend display-flex;
+    @include justify-content(space-between);
+    @include align-items(center);
 }
 
+.display-flex-center  {
+    @extend display-flex;
+    @include justify-content(center);
+    @include align-items(center);
+}
+
+.position-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%,-50%));
+}

@@ -38,14 +38,15 @@ class BukuController extends Controller
         $buku->tanggal=$request->get('tanggal');
         $buku->jumlah_buku=$request->get('jumlah_buku');
         $buku->save();
-        return redirect()->route('admin.buku.tampil');
+        return redirect()->route('page.data-buku.post');
     }
     public function delete($id)
     {
         $buku = buku::findOrFail($id);
         $buku->delete();
         
-        return redirect()->route('admin.buku.tampil');
+        return redirect()->route('page.data-buku');
     }
 }
 
+ 

@@ -38,13 +38,13 @@ class cabangcontroller extends Controller
         $cabang->tanggal=$request->get('tanggal');
         $cabang->jumlah_buku=$request->get('jumlah_buku');
         $cabang->save();
-        return redirect()->route('admin.cabang.tampil');
+        return redirect()->route('page.data-cabang.post');
     }
     public function delete($id)
     {
         $cabang = cabang::findOrFail($id);
         $cabang->delete();
         
-        return redirect()->route('admin.cabang.tampil');
+        return redirect()->route('page.data-cabang');
     }
 }

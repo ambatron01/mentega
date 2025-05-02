@@ -37,13 +37,13 @@ class pekerjaController extends Controller
         $pekerja->tugas=$request->get('tugas');
         $pekerja->no_telepon=$request->get('no_telepon');
         $pekerja->save();
-        return redirect()->route('admin.pekerja.tampil');
+        return redirect()->route('page.data-pekerja.post');
     }
     public function delete($id)
     {
         $pekerja = pekerja::findOrFail($id);
         $pekerja->delete();
         
-        return redirect()->route('admin.pekerja.tampil');
+        return redirect()->route('page.data-pekerja');
     }
 }

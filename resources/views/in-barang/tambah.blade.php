@@ -10,7 +10,7 @@
     <br>
     <h1 style="text-align: center;"><i>Tambah Barang</i></h1>
     <br>
-    <form action="{{ route('admin.barang.post') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('page.data-barang.post') }}" method="POST" enctype="multipart/form-data">
       @csrf
   <div class="mb-3">
     <label class="form-label">nama barang</label>

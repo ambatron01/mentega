@@ -17,7 +17,6 @@
       <th scope="col">nama barang</th>
       <th scope="col">tersedia</th>
       <th scope="col">terjual</th>
-      <th scope="col">aksi</th>
     </tr>
     </thead>
     <?php $nomor = 1 ?>
@@ -28,11 +27,6 @@
     <td>{{$item->nama_barang}}</td>
     <td>{{$item->tersedia}}</td>
     <td>{{$item->terjual}}</td>
-    <td>
-        <a href="{{route('admin.barang.edit' , $item->id) }}"><I>Edit</I></a>
-        <br>
-        <a href="/admin/barang/tampil/delete/{{$item->id}}"><i>Hapus</i></a>
-    </td>
   </tr>
   @endforeach
   </tbody>

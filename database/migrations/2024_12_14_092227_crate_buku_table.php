@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('buku', function(Blueprint $buku) {
             $buku->id();
             $buku->text('nama_buku');
-            $buku->enum('jenis' , ['cerita','dongeng','pelajaran']);
+            $buku->enum('jenis' , ['cerita','dongeng','pelajaran','musik','sejarah']);
             $buku->date('tanggal');
             $buku->text('jumlah_buku');
             $buku->timestamps();

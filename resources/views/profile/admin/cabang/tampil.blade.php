@@ -18,7 +18,6 @@
       <th scope="col">tempat daerah</th>
       <th scope="col">tanggal</th>
       <th scope="col">jumlah pengiriman buku</th>
-      <th scope="col">aksi</th>
     </tr>
     </thead>
     <?php $nomor = 1 ?>
@@ -30,11 +29,6 @@
     <td>{{ $place->daerah }}</td>
     <td>{{ $place->tanggal }}</td>
     <td>{{ $place->jumlah_buku }}</td>
-    <td>
-        <a href="{{route('admin.cabang.edit' , $place->id) }}"><I>Edit</I></a>
-        <br>
-        <a href="/admin/cabang/tampil/delete/{{$place->id}}"><i>Hapus</i></a>
-    </td>
   </tr>
   @endforeach
   </tbody>

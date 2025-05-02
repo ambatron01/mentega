@@ -18,7 +18,6 @@
       <th scope="col">Jenis Buku</th>
       <th scope="col">Tanggal Penerimaan</th>
       <th scope="col">Jumlah Buku</th>
-      <th scope="col">aksi</th>
     </tr>
     </thead>
     <?php $nomor = 1 ?>
@@ -30,11 +29,6 @@
     <td>{{$book->jenis}}</td>
     <td>{{$book->tanggal}}</td>
     <td>{{$book->jumlah_buku}}</td>
-    <td>
-        <a href="{{route('admin.buku.edit' , $book->id) }}"><I>Edit</I></a>
-        <br>
-        <a href="/admin/buku/tampil/delete/{{$book->id}}"><i>Hapus</i></a>
-    </td>
   </tr>
   @endforeach
   </tbody>

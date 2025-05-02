@@ -21,6 +21,8 @@
       <option value="cerita">Buku Cerita</option>
       <option value="dongeng">Buku Dongeng</option>
       <option value="pelajaran">Buku Pelajaran</option>
+      <option value="pelajaran">Buku Musik</option>
+      <option value="pelajaran">Buku Sejarah</option>
     </select>
   </div>
   <div class="mb-3">
