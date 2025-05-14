@@ -45,3 +45,21 @@
         </div>
     </form>
 </x-guest-layout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="form-group">
+                  <button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
+                </div>

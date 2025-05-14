@@ -50,3 +50,16 @@
         </div>
     </form>
 </x-guest-layout>
+
+
+
+
+
+
+
+
+
+
+<button type="submit" class="btn btn-primary ms-4">
+                                {{ __('Register') }}
+                            </button>
